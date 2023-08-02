@@ -5,6 +5,9 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content=" Personal Diary" />
+  <meta property="og:description" content=" what's the story today let's make a note today so that your happy day will always be remembered " />
+  <meta property="og:image" content="https://cdn.glitch.global/62353de6-55d3-43ff-b7b7-0f705245923c/Leather-Personal-Diary-or-Notebook-with-a-Button-Stud-3.jpg?v=1690947104813" />
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,13 +21,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Jua&amp;display=swap" rel="stylesheet" />
 
   <style>
-       .card-profile {
-         border-radius: 50%;
-         width: 100px;
-         height: 100px;
-         object-fit: cover;
-         object-position: center;
-       }
+    .card-profile {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      object-position: center;
+    }
   </style>
 
   <script> // javascript
@@ -45,6 +48,7 @@
             let title = articles[i]["title"];
             let content = articles[i]["content"];
             let file = articles[i]['file'];
+            let time = articles[i]['time'] || '????.??.??';
             let profile = articles[i]['profile'];
             let temp_html = `
         <div class="col-4">
@@ -56,7 +60,7 @@
             />
               <h5 class="card-title">${title}</h5>
               <p class="card-text">${content}</p>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <h6 class="card-subtitle mb-2 text-muted">${time}</h6>
             </div>
           </div>
         </div>
